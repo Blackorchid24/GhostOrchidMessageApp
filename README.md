@@ -73,7 +73,7 @@ Explore the main interfaces of GhostOrchid Chat, including authentication, messa
 
 ### 1. Admin Login
 
-![GhostOrchid Chat App - Admin Login](C:\xampp\htdocs\ghostorchid-chat\screenshots\Admin-Login.png)
+![GhostOrchid Chat App - Admin Login](./screenshots/Admin-Login.png)
 
 ### 2. User Login
 
@@ -419,4 +419,5 @@ Repository: [GhostOrchid Chat App](https://github.com/Blackorchid24/GhostOrchidM
 ---
 
 *GhostOrchid Chat — Connecting conversations through real-time communication.*
+"# GhostOrchidMessageApp" 
 "# GhostOrchidMessageApp" 
