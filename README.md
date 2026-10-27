@@ -69,9 +69,7 @@ Its modern dark-themed interface provides users with an organized environment fo
 
 ## Application Screenshots
 
-The following sections showcase the main interfaces of GhostOrchid Chat.
-
-**Important:** Place your actual screenshots in the `screenshots/` directory. The filenames below are examples and must match your actual image filenames exactly.
+Explore the main interfaces of GhostOrchid Chat, including authentication, messaging, group conversations, and profile management.
 
 ### 1. Admin Login
 
@@ -105,7 +103,7 @@ The following sections showcase the main interfaces of GhostOrchid Chat.
 
 ![GhostOrchid Chat App - User Profile](./screenshots/User-Profile.png)
 
-If a screenshot does not appear on GitHub, verify that the image exists in the repository and that its path, filename, extension, and capitalization match the Markdown reference.
+> **Note:** All image paths above must match the actual screenshot filenames committed to your repository. GitHub cannot display screenshots that are missing or referenced using incorrect paths.
 
 ---
 
@@ -134,9 +132,9 @@ If a screenshot does not appear on GitHub, verify that the image exists in the r
 
 ## System Requirements
 
-Before installing GhostOrchid Chat, ensure that your development environment includes:
+Before installing GhostOrchid Chat, ensure your development environment includes:
 
-- PHP 8.2 or a version compatible with the installed Laravel dependencies
+- PHP 8.2 or a version compatible with your installed Laravel dependencies
 - Composer
 - Node.js and npm
 - MySQL or MariaDB
@@ -250,7 +248,7 @@ Follow the instructions in the Google OAuth 2.0 Setup section below.
 
 ### 8. Configure Real-Time Messaging
 
-Configure Laravel Reverb, Laravel Echo, and Pusher JS according to the application's existing broadcasting configuration.
+Configure Laravel Reverb, Laravel Echo, and Pusher JS according to your application's existing broadcasting configuration.
 
 Ensure the frontend connection settings match the Reverb server settings.
 
@@ -302,7 +300,7 @@ GhostOrchid Chat uses Laravel Reverb as its WebSocket server and can use Laravel
 
 ### Example Environment Configuration
 
-The following values illustrate a typical local Reverb configuration. Match the names and values to the configuration used by your application.
+The following values illustrate a typical local Reverb configuration. Match the variable names and values to the configuration used by your application.
 
 ```env
 BROADCAST_CONNECTION=reverb
