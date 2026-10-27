@@ -3,7 +3,7 @@
 A modern, responsive, real-time messaging platform built with Laravel, PHP, MySQL, Laravel Reverb, Laravel Echo, Pusher JS, and Google OAuth 2.0.
 
 **GhostOrchid Chat** is a web-based communication application designed to provide a seamless messaging experience through a modern interface, real-time communication, user authentication, private conversations, and group chats.
-
+ 
 ---
 
 ## Table of Contents
