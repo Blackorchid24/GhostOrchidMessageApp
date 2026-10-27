@@ -400,10 +400,6 @@ Security is an important consideration when developing and deploying GhostOrchid
 
 ---
 
-## License
-
-No license has been specified for this project. If you intend to permit others to use, modify, or distribute the code, choose and add an appropriate open-source license.
-
 ## Author
 
 **Blackorchid Dev**
