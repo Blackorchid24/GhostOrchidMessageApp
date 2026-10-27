@@ -1,0 +1,15 @@
+# GhostOrchid Chat App — InfinityFree deployment patch
+
+This package adds a root `.htaccess` to route requests from the domain document root to `public/`, and removes the Vite development marker `public/hot` so Laravel uses the compiled assets in `public/build/`.
+
+## Upload instructions
+1. Back up the existing InfinityFree `htdocs` contents and database.
+2. Upload/extract this package so the `app`, `bootstrap`, `public`, `routes`, `vendor`, and other Laravel folders are directly inside `htdocs` (not nested inside another `ghostorchid-chat` folder).
+3. The package intentionally does not include `.env`. Keep/configure your existing production `.env` privately in `htdocs/.env`; set `APP_ENV=production`, `APP_DEBUG=false`, and `APP_URL` to your actual HTTPS domain. Configure the InfinityFree MySQL database credentials and use `SESSION_DRIVER=file`, `CACHE_STORE=file`, and `QUEUE_CONNECTION=sync` as suitable for your app.
+4. Confirm `public/index.php` can load `../vendor/autoload.php` and `../bootstrap/app.php`.
+5. Keep `public/.htaccess` in place. Do not upload `public/hot`; this package removes it.
+6. Test the homepage, then `/login`. If the server still returns its own 404, verify that this domain's document root is this `htdocs` directory.
+7. This package does not make Laravel Reverb run on InfinityFree; Reverb needs a separately hosted WebSocket server/service.
+
+## Security
+The source archive contained a real `.env` file and uploaded chat media. They are intentionally excluded from this deployment package. Do not share `.env` publicly. If the credentials in the uploaded archive were real, rotate the database password, Google OAuth client secret, mail password, and any other credentials that were present.
