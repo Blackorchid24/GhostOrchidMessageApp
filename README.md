@@ -2,7 +2,7 @@
 
 A modern, responsive, real-time messaging platform built with Laravel, PHP, MySQL, Laravel Reverb, Laravel Echo, Pusher JS, and Google OAuth 2.0.
 
-**GhostOrchid Chat** is a web-based communication application designed to provide a seamless messaging experience through a modern interface, real-time communication, user authentication, private conversations, and group chats.
+**GhostOrchid Chat** is a web-based communication application designed to provide a seamless messaging experience through a modern interface, user authentication, private conversations, and group chats.
 
 ---
 
@@ -69,59 +69,41 @@ Its modern dark-themed interface provides users with an organized environment fo
 
 ## Application Screenshots
 
-The following sections showcase the main interfaces of GhostOrchid Chat.
-
-Place your actual screenshots inside the `screenshots/` directory. The image paths below must match the filenames committed to GitHub.
+Explore the main interfaces of GhostOrchid Chat, including authentication, messaging, group conversations, and profile management.
 
 ### 1. Admin Login
 
-Administrative login interface for authorized administrators.
-
-![GhostOrchid Chat App - Admin Login](screenshots/Admin-Login.png)
+![GhostOrchid Chat App - Admin Login](./screenshots/Admin-Login.png)
 
 ### 2. User Login
 
-Login interface for users accessing their accounts.
-
-![GhostOrchid Chat App - User Login](screenshots/User-Login.png)
+![GhostOrchid Chat App - User Login](./screenshots/User-Login.png)
 
 ### 3. Login with Google
 
-Google authentication interface for signing in with Google accounts.
-
-![GhostOrchid Chat App - Google Sign-In](screenshots/Login-With-Google.png)
+![GhostOrchid Chat App - Google Sign-In](./screenshots/Login-With-Google.png)
 
 ### 4. Inbox
 
-Inbox interface for viewing and accessing private and group conversations.
-
-![GhostOrchid Chat App - Inbox](screenshots/Inbox.png)
+![GhostOrchid Chat App - Inbox](./screenshots/Inbox.png)
 
 ### 5. Chat Room
 
-Real-time messaging interface for communicating with other users.
-
-![GhostOrchid Chat App - Chat Room](screenshots/Chat-Room.png)
+![GhostOrchid Chat App - Chat Room](./screenshots/Chat-Room.png)
 
 ### 6. Create New Group
 
-Interface for creating a new group conversation.
-
-![GhostOrchid Chat App - Create New Group](screenshots/Create-New-Group.png)
+![GhostOrchid Chat App - Create New Group](./screenshots/Create-New-Group.png)
 
 ### 7. Group Profile
 
-Group profile interface for viewing group information and available management options.
-
-![GhostOrchid Chat App - Group Profile](screenshots/Group-Profile.png)
+![GhostOrchid Chat App - Group Profile](./screenshots/Group-Profile.png)
 
 ### 8. User Profile
 
-User profile interface for viewing and managing personal account information.
+![GhostOrchid Chat App - User Profile](./screenshots/User-Profile.png)
 
-![GhostOrchid Chat App - User Profile](screenshots/User-Profile.png)
-
-> **Note:** These image paths are examples. Replace them with your actual screenshot filenames if they differ. GitHub will not display images that have not been uploaded to the repository or whose paths are incorrect.
+> **Note:** All image paths above must match the actual screenshot filenames committed to your repository. GitHub cannot display screenshots that are missing or referenced using incorrect paths.
 
 ---
 
@@ -144,21 +126,21 @@ User profile interface for viewing and managing personal account information.
 | PHP Dependency Manager | Composer |
 | JavaScript Package Manager | npm |
 
-**Pusher JS clarification:** Pusher JS is a client-side JavaScript library that supports the Pusher protocol and can connect to Laravel Reverb. Installing `pusher-js` does not necessarily mean the application uses the hosted Pusher Channels service.
+**Pusher JS clarification:** Pusher JS is a client-side JavaScript library that supports the Pusher protocol and can connect to Laravel Reverb. Using `pusher-js` does not necessarily mean the application uses the hosted Pusher Channels service.
 
 ---
 
 ## System Requirements
 
-Before installing GhostOrchid Chat, ensure that your development environment includes:
+Before installing GhostOrchid Chat, ensure your development environment includes:
 
-- PHP 8.2 or a version compatible with the installed Laravel dependencies
+- PHP 8.2 or a version compatible with your installed Laravel dependencies
 - Composer
 - Node.js and npm
 - MySQL or MariaDB
 - XAMPP or another compatible local development environment
 - A modern web browser
-- Google Cloud project and OAuth credentials for Google Sign-In
+- A Google Cloud project and OAuth credentials for Google Sign-In
 - Laravel Reverb configuration for real-time messaging
 
 Check your installed versions:
@@ -177,8 +159,8 @@ npm -v
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Blackorchid24/ghostorchidChatApp.git
-cd ghostorchidChatApp
+git clone https://github.com/Blackorchid24/GhostOrchidMessageApp.git
+cd GhostOrchidMessageApp
 ```
 
 If you already have the repository cloned, open your existing project directory instead.
@@ -203,7 +185,7 @@ If Laravel Echo and Pusher JS are required but are not already installed, run:
 npm install laravel-echo pusher-js
 ```
 
-Do not reinstall packages unnecessarily if they are already listed in `package.json`.
+Avoid reinstalling packages unnecessarily if they are already listed in `package.json`.
 
 ### 3. Configure the Environment
 
@@ -258,7 +240,7 @@ If the application uses Laravel's public storage disk for avatars, images, and a
 php artisan storage:link
 ```
 
-Ensure that the required storage directories exist and are writable by the application.
+Ensure the required storage directories exist and are writable by the application.
 
 ### 7. Configure Google OAuth
 
@@ -266,7 +248,7 @@ Follow the instructions in the Google OAuth 2.0 Setup section below.
 
 ### 8. Configure Real-Time Messaging
 
-Configure Laravel Reverb, Laravel Echo, and Pusher JS according to the application's existing broadcasting configuration.
+Configure Laravel Reverb, Laravel Echo, and Pusher JS according to your application's existing broadcasting configuration.
 
 Ensure the frontend connection settings match the Reverb server settings.
 
@@ -318,7 +300,7 @@ GhostOrchid Chat uses Laravel Reverb as its WebSocket server and can use Laravel
 
 ### Example Environment Configuration
 
-The following values illustrate a typical local Reverb configuration. Match the names and values to the configuration used by your application.
+The following values illustrate a typical local Reverb configuration. Match the variable names and values to the configuration used by your application.
 
 ```env
 BROADCAST_CONNECTION=reverb
@@ -432,7 +414,7 @@ Project: GhostOrchid Chat App
 
 GitHub: [Blackorchid24](https://github.com/Blackorchid24)
 
-Repository: [GhostOrchid Chat App](https://github.com/Blackorchid24/ghostorchidChatApp)
+Repository: [GhostOrchid Chat App](https://github.com/Blackorchid24/GhostOrchidMessageApp)
 
 ---
 
