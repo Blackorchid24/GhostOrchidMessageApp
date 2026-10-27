@@ -21,36 +21,69 @@
             <div class="room-profile">
 
 
-                <form method="POST" action="{{ route('chat.group-avatar', $conversation) }}" enctype="multipart/form-data"
-                    class="group-avatar-upload">
-                    @csrf
+                
+<form method="POST"
+    action="{{ route('chat.group-avatar', $conversation) }}"
+    enctype="multipart/form-data"
+    class="group-avatar-upload"
+    id="groupAvatarUploadForm">
+    @csrf
 
-                    <label
-                        @if ((int) $conversation->created_by === (int) $currentUser->id) for="groupAvatarInput"
-            role="button"
-            tabindex="0"
-            aria-label="Change group photo" @endif
-                        class="room-avatar group-avatar group-avatar-clickable {{ (int) $conversation->created_by === (int) $currentUser->id ? 'can-edit' : '' }}"
-                        title="{{ (int) $conversation->created_by === (int) $currentUser->id ? 'Change group photo' : 'Group photo' }}">
-                        @if ($conversation->avatar_path)
-                            <img src="{{ \Illuminate\Support\Facades\Storage::disk('public')->url($conversation->avatar_path) }}"
-                                alt="{{ $conversation->name ?? 'Group' }} profile" class="group-avatar-image">
-                        @else
-                            <i class="fa-solid fa-users group-avatar-placeholder"></i>
-                        @endif
+    @php
+        $isGroupCreator = (int) $conversation->created_by === (int) $currentUser->id;
+        $groupAvatarUrl = $conversation->avatar_path
+            ? \Illuminate\Support\Facades\Storage::disk('public')->url($conversation->avatar_path)
+            : null;
+    @endphp
 
-                        @if ((int) $conversation->created_by === (int) $currentUser->id)
-                            <span class="group-avatar-edit">
-                                <i class="fa-solid fa-camera"></i>
-                            </span>
-                        @endif
-                    </label>
+    <label
+        @if ($isGroupCreator) for="groupAvatarInput" @endif
+        class="room-avatar group-avatar group-avatar-clickable {{ $isGroupCreator ? 'can-edit' : '' }}"
+        title="{{ $isGroupCreator ? 'Change group photo' : 'Group photo' }}"
+        @if ($isGroupCreator) tabindex="0" role="button" aria-label="Change group photo" @endif
+    >
+        @if ($groupAvatarUrl)
+            <img
+                src="{{ $groupAvatarUrl }}"
+                alt="{{ $conversation->name ?? 'Group' }} profile picture"
+                class="group-avatar-image"
+                id="groupAvatarPreview"
+                onerror="this.style.display='none'; this.nextElementSibling.hidden=false;"
+            >
+            <i class="fa-solid fa-users group-avatar-placeholder"
+                @if ($groupAvatarUrl) hidden @endif></i>
+        @else
+            <img
+                src=""
+                alt="{{ $conversation->name ?? 'Group' }} profile picture"
+                class="group-avatar-image"
+                id="groupAvatarPreview"
+                hidden
+            >
+            <i class="fa-solid fa-users group-avatar-placeholder"></i>
+        @endif
 
-                    @if ((int) $conversation->created_by === (int) $currentUser->id)
-                        <input type="file" id="groupAvatarInput" name="avatar" accept="image/jpeg,image/png,image/webp"
-                            hidden>
-                    @endif
-                </form>
+        @if ($isGroupCreator)
+            <span class="group-avatar-edit">
+                <i class="fa-solid fa-camera"></i>
+            </span>
+            <span class="group-avatar-loading" aria-hidden="true">
+                <i class="fa-solid fa-spinner"></i>
+            </span>
+        @endif
+    </label>
+
+    @if ($isGroupCreator)
+        <input
+            type="file"
+            id="groupAvatarInput"
+            name="avatar"
+            accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp"
+            hidden
+        >
+    @endif
+</form>
+
 
 
                 <h3>
