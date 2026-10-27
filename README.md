@@ -103,8 +103,6 @@ Explore the main interfaces of GhostOrchid Chat, including authentication, messa
 
 ![GhostOrchid Chat App - User Profile](./screenshots/User-Profile.png)
 
-> **Note:** All image paths above must match the actual screenshot filenames committed to your repository. GitHub cannot display screenshots that are missing or referenced using incorrect paths.
-
 ---
 
 ## Technology Stack
