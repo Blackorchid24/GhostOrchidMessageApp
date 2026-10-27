@@ -77,49 +77,49 @@ Place your actual screenshots inside the `screenshots/` directory. The image pat
 
 Administrative login interface for authorized administrators.
 
-![GhostOrchid Chat App - Admin Login](screenshots/admin-login.png)
+![GhostOrchid Chat App - Admin Login](screenshots/Admin-Login.png)
 
 ### 2. User Login
 
 Login interface for users accessing their accounts.
 
-![GhostOrchid Chat App - User Login](screenshots/login.png)
+![GhostOrchid Chat App - User Login](screenshots/User-Login.png)
 
 ### 3. Login with Google
 
 Google authentication interface for signing in with Google accounts.
 
-![GhostOrchid Chat App - Google Sign-In](screenshots/google-signin/google-signin.png)
+![GhostOrchid Chat App - Google Sign-In](screenshots/Login-With-Google.png)
 
 ### 4. Inbox
 
 Inbox interface for viewing and accessing private and group conversations.
 
-![GhostOrchid Chat App - Inbox](screenshots/inbox.png)
+![GhostOrchid Chat App - Inbox](screenshots/Inbox.png)
 
 ### 5. Chat Room
 
 Real-time messaging interface for communicating with other users.
 
-![GhostOrchid Chat App - Chat Room](screenshots/chat-room.png)
+![GhostOrchid Chat App - Chat Room](screenshots/Chat-Room.png)
 
 ### 6. Create New Group
 
 Interface for creating a new group conversation.
 
-![GhostOrchid Chat App - Create New Group](screenshots/create-new-group.png)
+![GhostOrchid Chat App - Create New Group](screenshots/Create-New-Group.png)
 
 ### 7. Group Profile
 
 Group profile interface for viewing group information and available management options.
 
-![GhostOrchid Chat App - Group Profile](screenshots/group-profile.png)
+![GhostOrchid Chat App - Group Profile](screenshots/Group-Profile.png)
 
 ### 8. User Profile
 
 User profile interface for viewing and managing personal account information.
 
-![GhostOrchid Chat App - User Profile](screenshots/user-profile.png)
+![GhostOrchid Chat App - User Profile](screenshots/User-Profile.png)
 
 > **Note:** These image paths are examples. Replace them with your actual screenshot filenames if they differ. GitHub will not display images that have not been uploaded to the repository or whose paths are incorrect.
 
