@@ -201,8 +201,6 @@ Generate the Laravel application key:
 php artisan key:generate
 ```
 
-Never upload your real `.env` file to GitHub.
-
 ### 4. Configure the Database
 
 Create a MySQL database named `ghostorchid_chat` using phpMyAdmin or your preferred MySQL client.
